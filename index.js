@@ -4,8 +4,11 @@ app.use(express.json())
 const port = 3000
 
 app.get('/',(req,res)=>{
-    res.send('Hola mundo')
+    res.render('index')
 })
+app.set('views','./views')
+app.set('view engine','ejs')
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
         })
